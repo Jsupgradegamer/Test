@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Second Page</title>
+    <script>
+        window.onload = function() {
+            if (localStorage.getItem("authenticated") !== "true") {
+                window.location.href = "index.html"; // Agar authentication nahi hai to wapas bhej do
+            }
+        };
+    </script>
+</head>
+<body>
+    <h2>Welcome to Second Page</h2>
+</body>
+</html>
