@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>First Page</title>
+    <script>
+        function goToSecondPage() {
+            sessionStorage.setItem("authenticated", "true"); // Authentication flag set karein
+            window.location.href = "second.html"; // Dusre page pe redirect karein
+        }
+    </script>
+</head>
+<body>
+    <h2>Welcome to First Page</h2>
+    <button onclick="goToSecondPage()">Go to Second Page</button>
+</body>
+</html>
