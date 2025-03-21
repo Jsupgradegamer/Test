@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Login Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #a6a6a6;
+        }
+        
+        .container {
+            width: 320px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            background: white;
+        }
+
+        .login-title {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .input-group h4 {
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .input-group input,.password-group input{
+            width: 70%;
+            padding: 4px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            background-color: #424242;
+            color: darkgrey;
+        }
+
+        .password-group {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .password-group h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .button-container {
+            text-align: center;
+           
+        }
+
+        .login-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 20px;
+            background-color: #595959;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .login-btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- First Div: Login Title -->
+        <div class="login-title">
+            <h3>Login</h3>
+        </div>
+
+        <!-- Second Div: Username Input -->
+        <div class="input-group">
+            <h4>Username</h4>
+            <input type="text" id ="name" placeholder="Enter your username">
+        </div>
+
+        <!-- Third Div: Password Input -->
+        <div class="password-group">
+            <h3>Password</h3>
+            <input type="password" id="password"placeholder="Enter your password">
+        </div>
+
+        <!-- Fourth Div: Button -->
+        <div class="button-container">
+            <button class="login-btn" onclick="next()">Login</button>
+        </div>
+    </div>
+<script>
+  function next(){
+   var name= document.getElementById("name").value;
+   var password =document.getElementById("password").value;
+   if(name=="Admin" && password=="Admin"){
+     console.log(name);
+       localStorage.setItem("Done", "true"); 
+           window.location.href="submit.html";
+   }else{
+alert("Sorry Something Went Wrong Try Again! ");
+}
+  }
+</script>
+</body>
+</html>
